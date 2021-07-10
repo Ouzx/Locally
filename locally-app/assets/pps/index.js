@@ -1,0 +1,9 @@
+export { default as x1 } from "./1.jpeg";
+export { default as x2 } from "./2.png";
+export { default as x3 } from "./3.jpg";
+export { default as x4 } from "./4.jpeg";
+export { default as x5 } from "./5.png";
+export { default as x6 } from "./6.png";
+export { default as x7 } from "./7.jpg";
+export { default as x8 } from "./8.jpg";
+export { default as x9 } from "./9.jpeg";

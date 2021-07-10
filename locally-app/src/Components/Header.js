@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StatusBar } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import Theme from "../utils/theme";
 
-export default ({ headerName }) => {
+export default ({ headerName, onPress }) => {
   return (
     <View>
       <StatusBar barStyle="dark-content" backgroundColor={Theme.Colors.white} />
@@ -18,7 +18,7 @@ export default ({ headerName }) => {
         }}
       >
         <Text style={{ fontSize: 24, fontWeight: "bold" }}>{headerName}</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onPress}>
           <AntDesign name="pluscircle" size={24} color="gray" />
         </TouchableOpacity>
       </View>
