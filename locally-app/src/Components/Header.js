@@ -5,17 +5,7 @@ import Theme from "../utils/theme";
 
 export default ({ headerName }) => {
   return (
-    <View
-      style={
-        {
-          // shadowOffset: { width: 10, height: 10 },
-          // shadowColor: "black",
-          // shadowOpacity: 1,
-          // elevation: 30,
-          // backgroundColor: "#0000",
-        }
-      }
-    >
+    <View>
       <StatusBar barStyle="dark-content" backgroundColor={Theme.Colors.white} />
       <View
         style={{

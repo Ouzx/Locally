@@ -4,7 +4,7 @@ import DetailHeader from "../Components/DetailHeader";
 export default () => {
   return (
     <View>
-      <DetailHeader headerName="Detay" />
+      <DetailHeader headerName="Detay" colors={["#FCA780", "#FF5981"]} />
     </View>
   );
 };

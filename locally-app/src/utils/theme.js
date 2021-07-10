@@ -7,4 +7,12 @@ const Numbers = {
   padding: 20,
 };
 
-export default { Colors, Numbers };
+const Shadow = {
+  shadowOffset: { width: 10, height: 10 },
+  shadowColor: "black",
+  shadowOpacity: 1,
+  elevation: 30,
+  backgroundColor: "#0000",
+};
+
+export default { Colors, Numbers, Shadow };
