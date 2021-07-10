@@ -1,17 +1,22 @@
 import React from "react";
 import { View, Text } from "react-native";
+import Header from "../Components/Header";
+import Colors from "../utils/theme";
 
 function HomeScreen() {
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#fff",
-      }}
-    >
-      <Text>Home Screen</Text>
+    <View style={{ flex: 1 }}>
+      <Header headerName="Rehber" />
+      <View
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: Colors.white,
+          flex: 1,
+        }}
+      >
+        <Text>Home Screen</Text>
+      </View>
     </View>
   );
 }
