@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 const Colors = {
   white: "white",
-  gray: "#F4F4F6",
+  gray: "rgba(137, 137, 137,0.8)",
 };
 
 const Numbers = {

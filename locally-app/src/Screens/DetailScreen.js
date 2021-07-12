@@ -1,11 +1,11 @@
 import React from "react";
-import { View, Text, TouchableOpacity, Image } from "react-native";
+import { View, Text, TouchableOpacity, Image, ScrollView } from "react-native";
 import Theme from "../utils/theme";
 import { BoxShadow } from "react-native-shadow";
 
 import DetailHeader from "../Components/DetailHeader";
 import Badge from "../Components/Badge";
-
+import DetailedItem from "../Components/DetailedItem";
 import * as pps from "../../assets/pps";
 
 const imgSize = 100;
@@ -51,6 +51,20 @@ export default ({ userName, userImg, badgeText, userColor, badgeColor }) => {
             </View>
           </View>
         </View>
+      </View>
+      <View>
+        <ScrollView
+          contentContainerStyle={{
+            padding: Theme.Numbers.paddingM,
+
+            // alignItems: "center",
+          }}
+        >
+          <DetailedItem colors={["#FCA780", "#FF5981"]} />
+          <DetailedItem colors={["#FCA780", "#FF5981"]} />
+          <DetailedItem colors={["#FCA780", "#FF5981"]} />
+          <DetailedItem colors={["#FCA780", "#FF5981"]} />
+        </ScrollView>
       </View>
     </View>
   );

@@ -4,12 +4,12 @@ import Theme from "../utils/theme";
 
 export default () => {
   return (
-    <View style={{ backgroundColor: Theme.Colors.white }}>
+    <View>
       <View
         style={{
           backgroundColor: Theme.Colors.gray,
-          marginHorizontal: 20,
-          height: 2,
+          marginHorizontal: Theme.Numbers.padding,
+          height: 1,
         }}
       />
     </View>
