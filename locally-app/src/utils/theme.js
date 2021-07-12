@@ -9,17 +9,15 @@ const Numbers = {
   paddingM: 30,
 };
 
-const Shadow = StyleSheet.create({
-  shadow: {
-    shadowOffset: { width: 25, height: 20 },
-    shadowColor: "black",
-    shadowOpacity: 1,
-    elevation: 10,
-    // background color must be set
-    backgroundColor: "#0000", // invisible color
-    // borderWidth: 1,
-    // borderColor: "black",
-  },
-});
+const Shadow = {
+  width: 50,
+  height: 50,
+  color: "#000",
+  border: 40,
+  radius: 1,
+  opacity: 0.4,
+  x: 20,
+  y: 30,
+};
 
 export default { Colors, Numbers, Shadow };
