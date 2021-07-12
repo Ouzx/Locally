@@ -4,7 +4,10 @@ import { AntDesign } from "@expo/vector-icons";
 import Theme from "../utils/theme";
 import { LinearGradient } from "expo-linear-gradient";
 
+import { useNavigation } from "@react-navigation/native";
+
 export default ({ headerName, colors, onPress }) => {
+  const navigation = useNavigation();
   return (
     <View>
       <LinearGradient start={[0, 1]} end={[1, 0]} colors={colors}>
@@ -22,7 +25,7 @@ export default ({ headerName, colors, onPress }) => {
               alignItems: "center",
             }}
           >
-            <TouchableOpacity onPress={onPress}>
+            <TouchableOpacity onPress={() => navigation.goBack()}>
               <AntDesign
                 name="arrowleft"
                 size={24}

@@ -4,6 +4,9 @@ import Theme from "../utils/theme";
 
 import Header from "../Components/Header";
 import Seperator from "../Components/Seperator";
+import ContactItem from "../Components/ContactItem";
+
+import * as pps from "../../assets/pps";
 
 function HomeScreen() {
   return (
@@ -13,12 +16,12 @@ function HomeScreen() {
       <View
         style={{
           alignItems: "center",
-          justifyContent: "center",
           backgroundColor: Theme.Colors.white,
           flex: 1,
+          padding: Theme.Numbers.paddingM,
         }}
       >
-        <Text>Home Screen</Text>
+        <ContactItem des1="asd" img={pps.x1} />
       </View>
     </View>
   );

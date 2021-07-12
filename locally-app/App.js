@@ -14,7 +14,7 @@ function App() {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName="Detay"
+        initialRouteName="Rehber"
       >
         <Stack.Screen name="Rehber" component={HomeScreen} />
         <Stack.Screen name="Detay" component={DetailScreen} />
