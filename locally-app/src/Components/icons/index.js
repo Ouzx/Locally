@@ -1,0 +1,1 @@
+export { default as Svgexport30 } from './Svgexport30'

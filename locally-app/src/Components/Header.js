@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, TouchableOpacity, StatusBar } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import Theme from "../utils/theme";
-
+import SvgExport30 from "./icons/Svgexport30";
 export default ({ headerName, onPress }) => {
   return (
     <View>
@@ -10,14 +10,18 @@ export default ({ headerName, onPress }) => {
       <View
         style={{
           flexDirection: "row",
-          justifyContent: "space-between",
+          // justifyContent: "space-between",
           padding: 20,
           paddingTop: 25,
           alignItems: "center",
           backgroundColor: Theme.Colors.white,
         }}
       >
-        <Text style={{ fontSize: 24, fontWeight: "bold" }}>{headerName}</Text>
+        {/* <Text style={{ fontSize: 24, fontWeight: "bold" }}>{headerName}</Text> */}
+
+        <View style={{ flex: 1 }}>
+          <SvgExport30 fill="black" width={150} />
+        </View>
         <TouchableOpacity onPress={onPress}>
           <AntDesign name="pluscircle" size={24} color="gray" />
         </TouchableOpacity>
