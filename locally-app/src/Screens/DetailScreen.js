@@ -1,10 +1,13 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import Theme from "../utils/theme";
-import DetailHeader from "../Components/DetailHeader";
 import { BoxShadow } from "react-native-shadow";
 
+import DetailHeader from "../Components/DetailHeader";
+import Badge from "../Components/Badge";
+
 import * as pps from "../../assets/pps";
+
 const imgSize = 100;
 const shadow = Theme.Shadow;
 
@@ -43,6 +46,9 @@ export default ({ userName, userImg, badgeText, userColor, badgeColor }) => {
             >
               Leon Garcia
             </Text>
+            <View style={{ alignSelf: "flex-start", marginTop: 5 }}>
+              <Badge badgeColor={["#FCA780", "#FF5981"]} badgeName="Badge" />
+            </View>
           </View>
         </View>
       </View>
