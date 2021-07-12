@@ -1,12 +1,11 @@
 import React from "react";
-import { View, Text, TouchableOpacity, Image } from "react-native";
+import { View, Text, Image } from "react-native";
 import Theme from "../utils/theme";
 import { BoxShadow } from "react-native-shadow";
 
 import DetailHeader from "../Components/DetailHeader";
 import Badge from "../Components/Badge";
 import DetailedItem from "../Components/DetailedItem";
-import * as pps from "../../assets/pps";
 
 import { Ionicons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
@@ -17,10 +16,12 @@ const shadow = Theme.Shadow;
 shadow.width = imgSize / 2;
 shadow.height = imgSize / 2;
 
-export default ({ userName, userImg, badgeText, userColor, badgeColor }) => {
+export default ({ route, navigation }) => {
+  const user = route.params;
+
   return (
     <View>
-      <DetailHeader headerName="Detay" colors={Theme.Gradients.g1} />
+      <DetailHeader headerName="Detay" colors={user.DetailedColor} />
       <View
         style={{
           padding: Theme.Numbers.paddingM,
@@ -34,7 +35,7 @@ export default ({ userName, userImg, badgeText, userColor, badgeColor }) => {
         >
           <BoxShadow setting={shadow}>
             <Image
-              source={pps.x1}
+              source={user.img}
               style={{ width: imgSize, height: imgSize, borderRadius: 12 }}
             />
           </BoxShadow>
@@ -47,10 +48,10 @@ export default ({ userName, userImg, badgeText, userColor, badgeColor }) => {
                 fontWeight: "bold",
               }}
             >
-              Leon Garcia
+              {user.des1}
             </Text>
             <View style={{ alignSelf: "flex-start", marginTop: 5 }}>
-              <Badge badgeColor={Theme.Gradients.g1} badgeName="Badge" />
+              <Badge badgeId={user.badgeId} />
             </View>
           </View>
         </View>
@@ -64,7 +65,7 @@ export default ({ userName, userImg, badgeText, userColor, badgeColor }) => {
           marginVertical: 10,
         }}
       >
-        <Text style={{ fontSize: 32 }}>(543) 548 6221</Text>
+        <Text style={{ fontSize: 32 }}>{user.num}</Text>
       </View>
       <View
         style={{
@@ -75,19 +76,16 @@ export default ({ userName, userImg, badgeText, userColor, badgeColor }) => {
         <DetailedItem
           colors={Theme.Gradients.g6}
           des1="Ara"
-          des2="5535216352"
           Icon={() => <Ionicons name="call" size={24} color="white" />}
         />
         <DetailedItem
           colors={Theme.Gradients.g7}
           des1="Mesaj"
-          des2="5535216352"
           Icon={() => <Entypo name="message" size={24} color="white" />}
         />
         <DetailedItem
           colors={Theme.Gradients.g8}
           des1="Ayarlar"
-          des2="5535216352"
           Icon={() => (
             <Ionicons name="settings-sharp" size={24} color="white" />
           )}
@@ -95,7 +93,6 @@ export default ({ userName, userImg, badgeText, userColor, badgeColor }) => {
         <DetailedItem
           colors={Theme.Gradients.g9}
           des1="Paylaş"
-          des2="5535216352"
           Icon={() => <Entypo name="share" size={24} color="white" />}
         />
       </View>

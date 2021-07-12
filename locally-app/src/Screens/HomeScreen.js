@@ -1,27 +1,39 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, FlatList } from "react-native";
 import Theme from "../utils/theme";
+import TempData from "../utils/TempData";
 
 import Header from "../Components/Header";
 import Seperator from "../Components/Seperator";
 import ContactItem from "../Components/ContactItem";
 
-import * as pps from "../../assets/pps";
-
 function HomeScreen() {
   return (
     <View style={{ flex: 1 }}>
-      <Header headerName="Rehber" />
+      <Header headerName="Local.ly" />
       <Seperator />
       <View
         style={{
-          alignItems: "center",
+          // alignItems: "center",
           backgroundColor: Theme.Colors.white,
-          flex: 1,
-          padding: Theme.Numbers.paddingM,
+          // flex: 1,
         }}
       >
-        <ContactItem des1="asd" img={pps.x1} />
+        <FlatList
+          contentContainerStyle={{ paddingBottom: 30 }}
+          style={{ height: "95%" }}
+          showsVerticalScrollIndicator={false}
+          keyExtractor={(item) => item.key}
+          renderItem={({ item }) => (
+            <ContactItem
+              des1={item.des1}
+              img={item.img}
+              badgeId={item.badgeId}
+              dataId={parseInt(item.key)}
+            />
+          )}
+          data={TempData}
+        />
       </View>
     </View>
   );
