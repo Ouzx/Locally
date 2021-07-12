@@ -20,4 +20,18 @@ const Shadow = {
   y: 30,
 };
 
-export default { Colors, Numbers, Shadow };
+const Gradients = {
+  g1: ["#FCA780", "#FF5981"],
+  g2: ["#CC36FE", "#9258FE"],
+  g3: ["#49DA6E", "#0FD48C"],
+  g4: ["#836AF4", "#4168F7"],
+  g5: ["#F18CF8", "#EB6379"],
+  // g6: ["#43E8DC", "#06BFF7"],
+  // g7: ["#23CBFC", "#1389FA"],
+  g6: ["#FAA700", "#FBDB17"],
+  g7: ["#FA3053", "#FC7081"],
+  g8: ["#5465FB", "#C286FF"],
+  g9: ["#EA6DC1", "#FBCDDA"],
+};
+
+export default { Colors, Numbers, Shadow, Gradients };
