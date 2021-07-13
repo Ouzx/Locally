@@ -1,7 +1,15 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  ToastAndroid,
+} from "react-native";
 import Theme from "../utils/theme";
 import { BoxShadow } from "react-native-shadow";
+
+import * as Clipboard from "expo-clipboard";
 
 import DetailHeader from "../Components/DetailHeader";
 import Badge from "../Components/Badge";
@@ -18,6 +26,21 @@ shadow.height = imgSize / 2;
 
 export default ({ route, navigation }) => {
   const user = route.params;
+  const rawNum = user.num.replace(/ /g, "").replace(/\(|\)/g, "");
+  const copyToClipboard = () => {
+    showToastWithGravity();
+    Clipboard.setString(rawNum);
+  };
+
+  const showToastWithGravity = () => {
+    ToastAndroid.showWithGravityAndOffset(
+      "Numara kopyalandı!",
+      ToastAndroid.SHORT,
+      ToastAndroid.BOTTOM,
+      0,
+      100
+    );
+  };
 
   return (
     <View>
@@ -65,7 +88,16 @@ export default ({ route, navigation }) => {
           marginVertical: 10,
         }}
       >
-        <Text style={{ fontSize: 32 }}>{user.num}</Text>
+        <TouchableOpacity
+          onPress={copyToClipboard}
+          style={{
+            alignItems: "center",
+            justifyContent: "center",
+            marginVertical: 12,
+          }}
+        >
+          <Text style={{ fontSize: 32 }}>{user.num}</Text>
+        </TouchableOpacity>
       </View>
       <View
         style={{
