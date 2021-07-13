@@ -26,7 +26,7 @@ shadow.height = imgSize / 2;
 
 export default ({ route, navigation }) => {
   const user = route.params;
-  const rawNum = user.num.replace(/ /g, "").replace(/\(|\)/g, "");
+  const rawNum = "0" + user.num.replace(/ /g, "").replace(/\(|\)/g, "");
   const copyToClipboard = () => {
     showToastWithGravity();
     Clipboard.setString(rawNum);
