@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StatusBar } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import Theme from "../utils/theme";
 import SvgExport30 from "./icons/Svgexport30";
-export default ({ headerName, onPress }) => {
+export default ({ onPress }) => {
   return (
     <View>
       <StatusBar barStyle="dark-content" backgroundColor={Theme.Colors.white} />
@@ -17,8 +17,6 @@ export default ({ headerName, onPress }) => {
           backgroundColor: Theme.Colors.white,
         }}
       >
-        {/* <Text style={{ fontSize: 24, fontWeight: "bold" }}>{headerName}</Text> */}
-
         <View style={{ flex: 1 }}>
           <SvgExport30 fill="black" width={150} />
         </View>

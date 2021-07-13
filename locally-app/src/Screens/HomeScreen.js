@@ -10,7 +10,7 @@ import ContactItem from "../Components/ContactItem";
 function HomeScreen() {
   return (
     <View style={{ flex: 1 }}>
-      <Header headerName="Local.ly" />
+      <Header />
       <Seperator />
       <View
         style={{
@@ -20,8 +20,8 @@ function HomeScreen() {
         }}
       >
         <FlatList
-          contentContainerStyle={{ paddingBottom: 30 }}
-          style={{ height: "95%" }}
+          ListFooterComponent={<View />}
+          ListFooterComponentStyle={{ height: 250 }}
           showsVerticalScrollIndicator={false}
           keyExtractor={(item) => item.key}
           renderItem={({ item }) => (
