@@ -7,6 +7,7 @@ export default [
     img: pps.x1,
     badgeId: 0,
     DetailedColor: Theme.Gradients.g1,
+    num: "(555) 232 1224",
   },
   {
     key: "1",
@@ -14,6 +15,7 @@ export default [
     img: pps.x3,
     badgeId: 1,
     DetailedColor: Theme.Gradients.g2,
+    num: "(555) 232 1224",
   },
   {
     key: "2",
@@ -21,6 +23,7 @@ export default [
     img: pps.x2,
     badgeId: 2,
     DetailedColor: Theme.Gradients.g3,
+    num: "(555) 232 1224",
   },
   {
     key: "3",
@@ -28,6 +31,7 @@ export default [
     img: pps.x4,
     badgeId: 3,
     DetailedColor: Theme.Gradients.g4,
+    num: "(555) 232 1224",
   },
   {
     key: "4",
@@ -35,6 +39,7 @@ export default [
     img: pps.x5,
     badgeId: 4,
     DetailedColor: Theme.Gradients.g5,
+    num: "(555) 232 1224",
   },
   {
     key: "5",
@@ -42,6 +47,7 @@ export default [
     img: pps.x6,
     badgeId: 5,
     DetailedColor: Theme.Gradients.g6,
+    num: "(555) 232 1224",
   },
   {
     key: "6",
@@ -49,6 +55,7 @@ export default [
     img: pps.x7,
     badgeId: 0,
     DetailedColor: Theme.Gradients.g7,
+    num: "(555) 232 1224",
   },
   {
     key: "7",
@@ -56,5 +63,6 @@ export default [
     img: pps.x8,
     badgeId: 1,
     DetailedColor: Theme.Gradients.g8,
+    num: "(555) 232 1224",
   },
 ];
