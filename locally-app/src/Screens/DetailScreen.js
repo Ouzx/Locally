@@ -99,6 +99,7 @@ export default ({ route, navigation }) => {
           <Text style={{ fontSize: 32 }}>{user.num}</Text>
         </TouchableOpacity>
       </View>
+
       <View
         style={{
           padding: Theme.Numbers.paddingM,
@@ -108,16 +109,19 @@ export default ({ route, navigation }) => {
         <DetailedItem
           colors={Theme.Gradients.g6}
           des1="Ara"
+          onPress={{ linkerType: "Phone", link: "+905051245665" }}
           Icon={() => <Ionicons name="call" size={24} color="white" />}
         />
         <DetailedItem
           colors={Theme.Gradients.g7}
           des1="Mesaj"
+          onPress={{ linkerType: "Message", link: "+905051245665" }}
           Icon={() => <Entypo name="message" size={24} color="white" />}
         />
         <DetailedItem
           colors={Theme.Gradients.g8}
           des1="Ayarlar"
+          onPress={{ linkerType: "Whatsapp", link: "+905051245665" }}
           Icon={() => (
             <Ionicons name="settings-sharp" size={24} color="white" />
           )}
@@ -125,6 +129,7 @@ export default ({ route, navigation }) => {
         <DetailedItem
           colors={Theme.Gradients.g9}
           des1="Paylaş"
+          onPress={{ linkerType: "Share", link: "+905051245665" }}
           Icon={() => <Entypo name="share" size={24} color="white" />}
         />
       </View>
